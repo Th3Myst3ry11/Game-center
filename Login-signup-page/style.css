@@ -3,54 +3,11 @@
     margin: 0px;
     overflow: hidden;
 }  
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Lexend Deca', sans-serif;
-    background-image: url(images/blur.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.mainContainer{
-  margin-left: -400px;
-  width: 650px;
-  height: 550px;  
-  display: flex;
-  justify-content: flex-start;
-  align-items: left;
-  flex-direction: column;
-  position: absolute; 
-  background-color: #faf3f39c;
-  backdrop-filter: blur(5px);
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-
-}
-
-.text{
-    margin: 45px 0 0 40px;
-}
-.bigText{
-    font-size: 40px;
-    line-height: 40px;
-}
 .smallText{
     padding-top: 10px;
     padding-left: 3px;
     line-height: 23px;
 }
-
-.inputs{
-    padding: 10px 0 10px 0;
-}
-.password{
-    margin-top: 10px;
-}
-
 input.email,.password{
     margin-left: 40px;
     border: 3px solid white;
@@ -58,7 +15,6 @@ input.email,.password{
     background: transparent;
     width: 200px;
     height: 35px;
-
 }
 
 input::placeholder{
@@ -69,49 +25,11 @@ input::placeholder{
 input:focus{
     outline-style: none;
 }
-
-button.signup{
-    background-color: #4CA2F7;
-    border-style: none;
-    border-radius: 7px;
-    color: white;
-    padding: 15px 75px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 40px;
-    cursor: pointer;
+.signup:hover{
+opacity: 0.9;
+transition: all 0.3s ease-in-out;
 }
-
-hr{
-    background-color: white;
-    color: white;
-    height: 3px;
-    border-style: none;
-    border-radius: 16px;
-    width: 90px;
-}
-hr.hr1{
-    margin: -10px 0 0 40px;
-    padding-bottom: 2px;
-}
-hr.hr2{
-    margin: -5px 0 0 155px;
-    padding-bottom: 2px;
-}
-.or{
-    font-size: 13px;
-    padding-bottom: 3px;
-    margin: 8px 0 0 137px;
-}
-
-.socialIcons{
-    
-    margin-top: 20px;
-    margin-left: 35px;
-
-}
+/*this i couldnt pass it to js style*/
 button.socialLogos{
     background-color: white;
     border-style: none;
@@ -120,49 +38,7 @@ button.socialLogos{
     width: 60px;
     margin-left: 7px;
     cursor: pointer;
-
 }
-.bottomText{
-    margin: 7px 0 0 40px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.signIn{
-    color: #7B37A6;
-    font-size: 11px;
-    margin-left: 195px;
-    margin-top: -14px;
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: bold;
-}
-
-.square {
-    position: absolute;
-    height: 550px;  
-    width: 500px;
-    background-color: #F39B5A;
-    margin: 100px 0 100px 500px;
-    border-radius: 25px;
-    z-index: 1;
-  }
-
-  .mobileImg{
-      position: relative;
-      height: 550px;
-      width: 700px;
-      margin-left: -70px;
-  }
-  .man{
-      margin-top: -30px;
-      margin-left: -490px;
-      height: 390px;
-      width: 760px;
-      z-index: 1;
-      position: absolute;
-
-      animation: bounce 2s infinite ease-out alternate;
-    }
       @keyframes bounce{
     0%{
         transform: translateY(0);
@@ -171,5 +47,26 @@ button.socialLogos{
         transform: translateY(-20px);
     }
 }
- 
+/*.mainContainer{
+    margin-left: -400px;
+width: 650px;
+height: 550px;  
+display: flex;
+justify-content: flex-start;
+align-items: left;
+flex-direction: column;
+position: absolute; 
+background-color: #faf3f39c;
+backdrop-filter: blur(5px);
+border-top-left-radius: 25px;
+border-bottom-left-radius: 25px;
+box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+
+}*/
+ @media  (max-width: 1052px) {
+    
+     .mainContainer{
+        margin-left: -300px;
+    }
+ }
 
