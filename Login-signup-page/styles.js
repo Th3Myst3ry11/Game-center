@@ -15,12 +15,9 @@ document.querySelector('body').style  = stylesBody;
 document.querySelector(".mainContainer").setAttribute("style",'margin-left: -400px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
 //signup button
 // Create a media condition that targets viewports at least 768px wide
-const mediaQuery2 = window.matchMedia('(max-width: 1052px)')
+
 // Check if the media query is true
-if (mediaQuery2.matches) {
-  // Then trigger an alert
-  document.querySelector('.mainContainer').setAttribute("style", 'margin-left: -300px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
-}
+
 let stylesSignup = `
 background-color: #4CA2F7;
     border-style: none;
@@ -57,8 +54,10 @@ document.querySelector('hr').style = stylesHR;
 //social logos
 let stylesSquare = `
 position: absolute;
-    height: 550px;  
-    width: 500px;
+max-height:550px;
+max-width:500px;
+    height:100%;  
+    width: 100%;
     background-color: #F39B5A;
     margin: 100px 0 100px 500px;
     border-radius: 25px;
@@ -67,22 +66,79 @@ position: absolute;
     //´mobileIMg
     let StylesmobileImg = `
     position: relative;
-    height: 550px;
-    width: 700px;
-    margin-left: -70px;
+    height: 100%;
+    width: 100%;
     `;
     document.querySelector('.mobileImg').style = StylesmobileImg;
     //rocket style
-
       document.querySelector(".rocket").setAttribute(
-        "style", "height: 390px; width: 360px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
-// Create a media condition that targets viewports at least 768px wide
-const mediaQuery = window.matchMedia('(max-width: 1052px)')
-// Check if the media query is true
-if (mediaQuery.matches) {
-  // Then trigger an alert
-  document.querySelector('.rocket').setAttribute("style", "height: 390px; width: 300px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
-}
+        "style", "height: 100%; width: 100%;  z-index: 1; top:80px; margin-left: -190px; position: relative");
+        
+ //media query 1056px
+ const mediaQuery1056 = window.matchMedia('(max-width: 1056px)')
+
+ mediaQuery1056.addEventListener("change", e=>{
+   // Check if the media query is true
+   if(e.matches){
+     document.querySelector(".mainContainer").setAttribute("style",'margin-left: -350px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+   }
+  else{
+    document.querySelector(".mainContainer").setAttribute("style",'margin-left: -400px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+  }
+ 
+ })  
+
+// Media query 1002px
+const mediaQuery1002 = window.matchMedia('(max-width: 1002px)')
+
+mediaQuery1002.addEventListener("change", e=>{
+  // Check if the media query is true
+  if(e.matches){
+    document.querySelector(".mainContainer").setAttribute("style",'margin-left: -250px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+    document.querySelector('.rocket').setAttribute("style", "height: 390px; width: 290px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
+    document.querySelector('.square').setAttribute("style", "position: absolute;max-height:550px;max-width:500px; height: 100%;  width: 100%;background-color: #F39B5A;margin: 100px 0 100px 400px;border-radius: 25px;z-index: 1");
+    
+  }
+ else{
+  document.querySelector('.rocket').setAttribute("style", "height: 390px; width: 360px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
+  document.querySelector(".mainContainer").setAttribute("style",'margin-left: -350px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+  document.querySelector('.square').setAttribute("style", "position: absolute;max-height:550px;max-width:500px; height: 100%;  width: 100%;background-color: #F39B5A;margin: 100px 0 100px 500px;border-radius: 25px;z-index: 1");
+  
+ }
+
+})
+//media query 900
+const mediaQuery900 = window.matchMedia('(max-width: 900px)')
+
+mediaQuery900.addEventListener("change", e=>{
+  // Check if the media query is true
+  if(e.matches){
+    document.querySelector(".mainContainer").setAttribute("style",'margin-left: -150px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+    document.querySelector('.rocket').setAttribute("style", "height: 350px; width: 230px;  z-index: 1; top:80px; margin-left: -100px; position: relative");
+    document.querySelector('.square').setAttribute("style", "position: absolute;max-height:550px;max-width:500px; height: 100%;  width: 100%;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+  }
+ else{
+ document.querySelector(".mainContainer").setAttribute("style",'margin-left: -250px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+    document.querySelector('.rocket').setAttribute("style", "height: 390px; width: 290px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
+    document.querySelector('.square').setAttribute("style", "position: absolute;max-height:550px;max-width:500px; height: 100%;  width: 100%;background-color: #F39B5A;margin: 100px 0 100px 400px;border-radius: 25px;z-index: 1"); 
+ }
+
+})
+//media query 800px
+  const mediaQuery800 = window.matchMedia('(max-width: 800px)');
+  mediaQuery800.addEventListener("change", e=>{
+    if(e.matches){
+      document.querySelector(".mainContainer").setAttribute("style",'margin-left: -50px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+    document.querySelector('.rocket').setAttribute("style", "height: 350px; width: 230px;  z-index: 1; top:80px; position: relative");
+    document.querySelector('.square').setAttribute("style", "position: absolute;height: 550px;  width: 400px;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+    }
+   else{
+   document.querySelector(".mainContainer").setAttribute("style",'margin-left: -150px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
+    document.querySelector('.rocket').setAttribute("style", "height: 350px; width: 230px;  z-index: 1; top:80px; margin-left: -100px; position: relative");
+    document.querySelector('.square').setAttribute("style", "position: absolute;height: 550px;  width: 500px;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+   }
+  })
+
 //man div style
 let styleMan = `
 height: 100%;
