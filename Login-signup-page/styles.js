@@ -1,5 +1,8 @@
 'use strict'
+
+/*use another method . media queries in css , and  remove Inline style in js */ 
 //body script
+/*
 let stylesBody = `
 display: flex;
 justify-content: center;
@@ -72,9 +75,47 @@ max-width:500px;
     document.querySelector('.mobileImg').style = StylesmobileImg;
     //rocket style
       document.querySelector(".rocket").setAttribute(
-        "style", "height: 100%; width: 100%;  z-index: 1; top:80px; margin-left: -190px; position: relative");
-        
- //media query 1056px
+        "style", "height: 390px; width: 360px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
+//man div style
+let styleMan = `
+height: 100%;
+      width: 100%;
+      position: absolute;
+      animation: bounce 2s infinite ease-out alternate`;
+      document.querySelector('.man').style = styleMan;
+//or style
+let styleOr = `
+font-size: 13px;
+padding-bottom: 3px;
+margin: 8px 0 0 137px`
+document.querySelector('.or').style = styleOr;
+// .bottomText class
+let StylebottomText = `
+ margin: 7px 0 0 40px;
+    font-size: 12px;
+    font-weight: bold`
+document.querySelector('.bottomText').style = StylebottomText;*/
+// small text
+/*let styleSmallText = `
+padding-top: 10px;
+padding-left: 3px;
+line-height: 23px`;
+document.querySelector('div .smallText').style = StyleSmallText;
+*/
+/* como fazer o style no javascript sem ser in-line
+<style id="targetStyle">
+  .something{
+    height : 100px;
+  }
+</style>
+and then in your javascript
+
+var styleDom = document.getElementById('targetStyle');
+styleDom.innerHTML = styleDom.innerHTML.replace(/height.*px;/,'height: 85px;');*/
+/*
+$(document).ready(function () {
+  //this funtion is to run the code as soon as the page reloads
+   //media query 1056px
  const mediaQuery1056 = window.matchMedia('(max-width: 1056px)')
 
  mediaQuery1056.addEventListener("change", e=>{
@@ -103,7 +144,6 @@ mediaQuery1002.addEventListener("change", e=>{
   document.querySelector('.rocket').setAttribute("style", "height: 390px; width: 360px;  z-index: 1; top:80px; margin-left: -190px; position: relative");
   document.querySelector(".mainContainer").setAttribute("style",'margin-left: -350px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
   document.querySelector('.square').setAttribute("style", "position: absolute;max-height:550px;max-width:500px; height: 100%;  width: 100%;background-color: #F39B5A;margin: 100px 0 100px 500px;border-radius: 25px;z-index: 1");
-  
  }
 
 })
@@ -130,48 +170,16 @@ mediaQuery900.addEventListener("change", e=>{
     if(e.matches){
       document.querySelector(".mainContainer").setAttribute("style",'margin-left: -50px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
     document.querySelector('.rocket').setAttribute("style", "height: 350px; width: 230px;  z-index: 1; top:80px; position: relative");
-    document.querySelector('.square').setAttribute("style", "position: absolute;height: 550px;  width: 400px;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+    document.querySelector('.square').setAttribute("style", "position: absolute;max-height: 550px;width:100%;height: 100%;  max-width: 400px;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+    console.log("this is 800px")
     }
    else{
    document.querySelector(".mainContainer").setAttribute("style",'margin-left: -150px;width: 650px;height: 550px;  display: flex;justify-content: flex-start;align-items: left;flex-direction: column;position: absolute; background-color: #faf3f39c;backdrop-filter: blur(5px);border-top-left-radius: 25px;border-bottom-left-radius: 25px;box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)');
     document.querySelector('.rocket').setAttribute("style", "height: 350px; width: 230px;  z-index: 1; top:80px; margin-left: -100px; position: relative");
-    document.querySelector('.square').setAttribute("style", "position: absolute;height: 550px;  width: 500px;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+    document.querySelector('.square').setAttribute("style", "position: absolute;max-height:550px;max-width:500px; height: 100%;  width: 100%;background-color: #F39B5A;margin: 100px 0 100px 300px;border-radius: 25px;z-index: 1");
+   
    }
   })
-
-//man div style
-let styleMan = `
-height: 100%;
-      width: 100%;
-      position: absolute;
-      animation: bounce 2s infinite ease-out alternate`;
-      document.querySelector('.man').style = styleMan;
-//or style
-let styleOr = `
-font-size: 13px;
-padding-bottom: 3px;
-margin: 8px 0 0 137px`
-document.querySelector('.or').style = styleOr;
-// .bottomText class
-let StylebottomText = `
- margin: 7px 0 0 40px;
-    font-size: 12px;
-    font-weight: bold`
-document.querySelector('.bottomText').style = StylebottomText;
-// small text
-/*let styleSmallText = `
-padding-top: 10px;
-padding-left: 3px;
-line-height: 23px`;
-document.querySelector('div .smallText').style = StyleSmallText;
-*/
-/* como fazer o style no javascript sem ser in-line
-<style id="targetStyle">
-  .something{
-    height : 100px;
-  }
-</style>
-and then in your javascript
-
-var styleDom = document.getElementById('targetStyle');
-styleDom.innerHTML = styleDom.innerHTML.replace(/height.*px;/,'height: 85px;');*/
+//end of scope function
+console.log("ready dispatched")
+  });*/
