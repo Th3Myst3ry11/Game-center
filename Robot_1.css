@@ -1,0 +1,162 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lato:ital,wght@1,100;1,900&display=swap');
+      body {
+        margin: 0;
+        box-sizing: border-box ;
+        display:flex;
+        height: -webkit-fill-available;
+      }
+      html, body {
+        height: 100%;
+      }
+      canvas {
+        display: block;
+      z-index: 2;
+      
+      }
+      p{
+        color: rgb(0, 136, 255);
+        position: absolute;
+        right: 10%;
+        top: 10%;
+        }
+      #lefSide{
+        opacity: 1;
+   
+      }
+      
+      #logo{
+      width: 60px;
+      height: 60px;
+      }
+      #Middle ul {
+        display: flex;
+        position: absolute;
+       right: 0;
+       margin-right: 25px;
+       top: 5%;
+       color: aliceblue;
+      }
+      #Middle ul li {
+        
+        list-style: none;
+        margin: 0px 25px;
+        
+      }
+      h4,p{
+        color: #e6e2d8;
+        font-family: 'Lato', sans-serif;
+      }
+      h1{
+        font-family: 'Koulen', cursive;
+        color: #ffffff;
+        font-size: 100px;
+      
+      }
+       li i {
+       font-size: xx-large;
+      
+      }
+      #leftSide ul i:hover{
+        transform: scale(1.1);
+        transition: all ease-in-out 0.3s;
+      }
+      #Middle ul li :hover{
+        opacity: 0.7;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+      }
+      
+      #leftSide ul i{
+display: flex;
+flex-direction: column;
+margin-top:10px;
+font-size:30px;
+      }
+      #leftSide ul{
+        position: absolute;
+        bottom: 0px;
+      }
+    #canvas3d_74{
+        display: none ;
+    }
+      #btnGetStarted{
+        position: absolute;
+        bottom: 50px;
+        right: 40px;
+        padding: 40px 50px;
+background-color: #00ffe5;  
+      }
+      #btnGetStarted:hover{
+cursor: pointer;
+opacity: 0.7;
+transition: all ease-in-out 0.3s;
+      }
+      #btnGetStarted a{
+        position:absolute;
+        bottom: 0px;
+      }
+      #leftSide div{
+        position: absolute;
+         top: 200px;
+          left: 250px;
+      }
+      #Middle p{
+        white-space: pre-line;
+         margin-top: 400px;
+          margin-right:-150px
+      }
+@media (max-width:1517px){
+    #leftSide div{
+        position: absolute;
+         top: 200px;
+          left: 200px;
+      }
+}
+@media (max-width:1475px){ 
+#Middle p{
+    margin-right:-130px;
+}
+#leftSide #text-div{
+    left: 150PX;
+}
+}
+@media (max-width:1370px){ 
+    #leftSide #text-div{
+        left: 100PX;
+    }
+    #Middle button{
+        right: 20px;
+        padding: 30px 30px;
+    }
+}
+@media (max-width:1261px){ 
+    #Middle p{
+        display: none;
+    }
+    #leftSide #text-div{
+        left: 50PX;
+    }
+}
+@media (max-width:1190px){ 
+    h1{
+        font-size: 80px;
+    }
+    #Middle button{
+        right: 10px;
+        padding: 20px 20px;
+    }
+}
+@media (max-width:1088px){ 
+    #leftSide #text-div{
+        left: 1PX;
+    }
+}
+@media (max-width:1000px){
+    #canvas3d_74{
+        display: block;
+    }
+    #canvas3d{
+      display: none;
+    }
+ }
