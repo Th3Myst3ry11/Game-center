@@ -84,6 +84,8 @@ font-size:30px;
         position: absolute;
         bottom: 50px;
         right: 40px;
+        color: black;
+        text-decoration: none;
         padding: 40px 50px;
 background-color: #00ffe5;  
       }
