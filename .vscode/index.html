@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--font awesome 5 cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Robot_1.css">
+  </head>
+  <body>
+   <!--lef side-->
+    <div id="leftSide" >
+      <img  id="logo" src="cg/logo.png" alt="central games logo">
+     <div id="text-div">
+      <h4 >Welcome! to</h4>
+      <h1 style="line-height:0.9" id="h1paragraph" >CENTRAL<br>
+        GAMES</h1>
+        <h4 style="white-space: pre-line">a space where
+          There are many games 
+          for you to play</h4>
+     </div>
+       
+      
+      <ul >
+        <i style="color:blue;cursor: pointer;"class="fa-brands fa-facebook"></i>
+        <i style="color:  #fb3958;cursor: pointer;"class="fa-brands fa-instagram"></i>
+        <i style="color: rgb(0, 136, 255);cursor: pointer;"class="fa-brands fa-twitter"></i>
+      </ul>
+     <!--right side-->
+    </div>   
+      <div id="Middle">
+        <ul>
+          <li style="padding-top: 6px;"><a style="text-decoration: none; color: aliceblue;" href="">ABOUT</a></li>
+          <li style="padding-top: 6px;"><a style="text-decoration: none; color: aliceblue;" href="">CONTACT</a></li>
+          <li><a href="Login-signup-page/login.html"style="color:white"><i class="fa-regular fa-circle-user"></i></a></li></ul>
+        <p  id="paragraph1">A game center, introducing games
+          with 3d characters and elements, 
+          along with cool efects everywhere.
+        </p>
+        
+<a id="btnGetStarted" href="HomePage/HomePage.html" >GET STARTED<i style="margin-left:10px ;"class='fas fa-angle-right'></i></a>
+  
+<canvas id="canvas3d">
+      <i class="fa-regular fa-circle-user"></i>
+    </canvas>
+    <canvas id="canvas3d_74"></canvas>
+  </div> 
+    
+    <script type="module">
+      import { Application } from './runtime_1.js';
+      const canvas = document.getElementById('canvas3d');
+      const app = new Application(canvas);
+      app.load('./scene_1.splinecode');
+      //
+      //const canvas_74 = document.getElementById('canvas3d_74');
+      //const app74 = new Application(canvas);
+      //app.load('./scene_74.splinecode');
+    </script>
+   
+    <script src="script.js"></script>
+  </body>
+</html>
+  
+  
