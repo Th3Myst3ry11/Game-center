@@ -26,12 +26,12 @@ a{
 }
 /*header*/
 .header{
-	position: absolute;
 	width: 100%;
 	left:0;
 	top:0;
 	z-index: 99;
 	padding: 15px;
+	position: absolute;
 }
 .header-main{
 	background-color: #ffffff;
@@ -197,13 +197,46 @@ a{
 .home-section{
 	width: 100%;
 	display: block;
-	min-height: 100vh;
+	height: 100vh;
 	background-position: center top;
 	background-size: cover;
 	background-color: #000000;
+	
 }
-
-
+.containerGames{
+	display: flex;
+	position: relative;
+	top: 50%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+}
+#rpc{
+	width: 350px;
+	height: 200px;
+	margin-left: 490px;
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	align-items: center;
+	position: absolute;
+	border-radius: 1em;
+}
+#rpc:hover,#Quiz:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+#Quiz{
+	margin-right:290px;
+	font-size: 24px;
+	width: 350px;
+	height: 200px;
+	
+	outline: dashed 1px black;
+	border-radius: 1em;
+	position: absolute;
+	/* Center vertically and horizontally */
+	
+  }
 /* responsive */
 
 @media(max-width: 991px){
