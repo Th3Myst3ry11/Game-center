@@ -16,6 +16,7 @@ addQuestion = () => {
     const url = 'https://opentdb.com/api.php?amount=10&category=9';
     fetch(url)
         .then(data => data.json())
+        .then(data => console.log(data))
         .then(result => showQuestion(result.results));
 }
 showQuestion = questions => {

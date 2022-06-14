@@ -139,51 +139,7 @@ if(playerChoice === "scissor" && computerChoice === "paper"){
   updateScore();
   return;
 }
-    //Check for Rock
-    //logic-if  playerChoice and computerChoice are different and computerChoice is not scissors then it Must be Paper
-    //if(playerChoice === "rock" && computerChoice === "scissor"){
-  /* if (playerChoice === "rock") {
-      if (computerChoice === "scissor") {
-       
-        winner.textContent = youWin;
-        pScore++;
-        updateScore();
-        return;
-      } else {
-        winner.textContent = youLost;
-        cScore++;
-        updateScore();
-        return;
-      }
-    }*/
-    //Check for Paper
-    /*if (playerChoice === "paper") {
-      if (computerChoice === "scissor") {
-        winner.textContent = "Computer Wins";
-        cScore++;
-        updateScore();
-        return;
-      } else {
-        winner.textContent = "Player Wins";
-        pScore++;
-        updateScore();
-        return;
-      }
-    }*/
-    //Check for Scissors
-   /* if (playerChoice === "scissor") {
-      if (computerChoice === "rock") {
-        winner.textContent = "Computer Wins";
-        cScore++;
-        updateScore();
-        return;
-      } else {
-        winner.textContent = "Player Wins";
-        pScore++;
-        updateScore();
-        return;
-      }
-    }*/
+   
   };
   startGame();
   playMatch();
